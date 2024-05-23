@@ -30,6 +30,29 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 			</plugin>
+			<plugin>
+  <groupId>org.mule.tools.maven</groupId>
+  <artifactId>mule-maven-plugin</artifactId>
+  <version>3.7.1</version>
+  <extensions>true</extensions>
+  <configuration>
+    <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>${app.runtime}</muleVersion>
+      <username>${username}</username>    anypoint platform Credentials 
+      <password>${password}</password>
+      <applicationName>${cloudhub.application.name}</applicationName>   Unique application name for deploying in anypoint platform 
+      <environment>${environment}</environment>  environment
+      <region>${region}</region>
+      <workers>${workers}</workers>
+	  <objectStoreV2>true</objectStoreV2>
+      <workerType>${workerType}</workerType>
+      <properties>
+        <key>value</key>
+      </properties>
+    </cloudHubDeployment>
+  </configuration>
+</plugin>
 		</plugins>
 	</build>
 
